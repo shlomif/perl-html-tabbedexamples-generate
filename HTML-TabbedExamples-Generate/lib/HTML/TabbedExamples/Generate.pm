@@ -123,6 +123,83 @@ sub html_with_title
 HTML::TabbedExamples::Generate - generate syntax-highlighted examples for
 codes with a markup compatible with jQueryUI's tab widgets.
 
+=head1 SYNOPSIS
+
+        use PerlBegin::TopicsExamples;
+
+        use strict;
+        use warnings;
+
+        # Examples generator:
+        my $ex_gen = PerlBegin::TopicsExamples->new(
+            {
+                default_syntax => 'perl',
+            }
+        );
+
+        print $ex_gen->html_with_title(
+            {
+                title => "Copying a file",
+                id_base => "copying_a_file",
+                examples =>
+                [
+                    {
+                        id => "io_all",
+                        label => "IO-All",
+                        code => <<'EOF',
+        use IO::All;
+
+        my ($source_filename, $dest_filename) = @_;
+        io->file($source_filename) > io->file($dest_filename);
+        EOF
+
+                    },
+                    {
+                        id => "core",
+                        label => "Core Perl",
+                        code => <<'EOF',
+        use File::Copy qw(copy);
+
+        my ($source_filename, $dest_filename) = @_;
+
+        copy($source_filename, $dest_filename);
+        EOF
+                    },
+                ],
+            }
+        );
+
+        print $ex_gen->html_with_title(
+            {
+                title => "Overwriting a file with text",
+                id_base => "overwrite_a_file",
+                examples =>
+                [
+                    {
+                        id => "io_all",
+                        label => "IO-All",
+                        code => <<'EOF',
+        use IO::All;
+
+        io->file("output.txt")->utf8->print("Hello World!\n");
+        EOF
+
+                    },
+                    {
+                        id => "core",
+                        label => "Core Perl",
+                        code => <<'EOF',
+        use autodie;
+
+        open my $out, '>:encoding(utf8)', "output.txt";
+        print {$out} "Hello World!\n";
+        close($out);
+        EOF
+                    },
+                ],
+            }
+        );
+
 =head1 METHODS
 
 =head2 my $obj = HTML::TabbedExamples::Generate->new({ default_syntax => "perl", main_pre_css_classes => [qw( code my_example1 )]})
