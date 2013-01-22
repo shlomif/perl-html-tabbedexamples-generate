@@ -125,13 +125,13 @@ codes with a markup compatible with jQueryUI's tab widgets.
 
 =head1 SYNOPSIS
 
-        use PerlBegin::TopicsExamples;
+        use HTML::TabbedExamples::Generate;
 
         use strict;
         use warnings;
 
         # Examples generator:
-        my $ex_gen = PerlBegin::TopicsExamples->new(
+        my $ex_gen = HTML::TabbedExamples::Generate->new(
             {
                 default_syntax => 'perl',
             }
