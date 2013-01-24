@@ -3,7 +3,7 @@ package HTML::TabbedExamples::Generate;
 use strict;
 use warnings;
 
-our $VERSION = '0.0.1';
+our $VERSION = '0.0.2';
 
 use MooX 'late';
 

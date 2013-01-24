@@ -1,4 +1,8 @@
 Revision history for HTML-TabbedExamples-Generate
 
+v0.0.2  2013-01-24
+    - Add missing prereqs on MooX::late/etc.
+        - Fixes CPAN smoking failures
+
 v0.0.1  2013-01-22
     - First version, released on an unsuspecting world
