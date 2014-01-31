@@ -1,5 +1,8 @@
 Revision history for HTML-TabbedExamples-Generate
 
+v0.0.4  2014-01-31
+    - Add provides in META.yml (CPANTS Kwalitee).
+
 v0.0.3  2013-01-26
     - Bump the minimum version of perl to 5.14.x.
 
