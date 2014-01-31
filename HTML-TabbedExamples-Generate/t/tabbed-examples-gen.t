@@ -29,8 +29,9 @@ use warnings;
                 {
                     id => "io_all",
                     label => "IO-All",
-                    code => <<'EOF',
-use IO::All;
+                    # To avoid CPANTS thinking that IO::All is a dependency
+                    # we obscure the use statement.
+                    code => (lc("USE ")."IO::All;\n".<<'EOF'),
 
 my ($source_filename, $dest_filename) = @_;
 io->file($source_filename) > io->file($dest_filename);
