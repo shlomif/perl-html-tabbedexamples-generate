@@ -4,6 +4,7 @@ v0.0.4  2014-01-31
     - Add provides in META.yml (CPANTS Kwalitee).
     - Obscure a use line that confused CPANTS, thinkin IO::All should be
     a prereq.
+    - Add tests for trailing space and CPAN Changes.
 
 v0.0.3  2013-01-26
     - Bump the minimum version of perl to 5.14.x.
