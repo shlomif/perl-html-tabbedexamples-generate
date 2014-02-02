@@ -1,5 +1,8 @@
 Revision history for HTML-TabbedExamples-Generate
 
+v0.0.5  2014-02-02
+    - =encoding fix to POD.
+
 v0.0.4  2014-01-31
     - Add provides in META.yml (CPANTS Kwalitee).
     - Obscure a use line that confused CPANTS, thinkin IO::All should be
