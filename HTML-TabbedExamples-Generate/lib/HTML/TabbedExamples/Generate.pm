@@ -5,7 +5,7 @@ use warnings;
 
 use 5.014;
 
-our $VERSION = '0.0.5';
+our $VERSION = '0.0.6';
 
 use MooX 'late';
 

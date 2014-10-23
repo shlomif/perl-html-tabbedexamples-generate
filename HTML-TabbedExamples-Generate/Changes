@@ -1,5 +1,11 @@
 Revision history for HTML-TabbedExamples-Generate
 
+v0.0.6  2014-10-24
+    - Add Kwalitee test.
+    - Remove duplicate encoding weaver.ini plugins.
+        - see https://bitbucket.org/shlomif/perl-html-tabbedexamples-generate/pull-request/1/drop-pwp-encoding-dependency/diff
+        - Thanks to Sergey Romanov
+
 v0.0.5  2014-02-02
     - =encoding fix to POD.
 
